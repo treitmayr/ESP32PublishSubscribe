@@ -6,7 +6,9 @@ def run_qemu(source, target, env):
     MERGED_BIN = env.subst("$BUILD_DIR/${PROGNAME}_merged.bin")
     cmd = ['qemu-system-xtensa', '-nographic', '-machine', 'esp32',
            '-drive', 'file=' + MERGED_BIN +',if=mtd,format=raw', '-no-reboot',
-           '-serial', 'stdio', '-monitor', '/dev/null']
+           '-serial', 'stdio', '-monitor', '/dev/null',
+           '-nic', 'user,model=open_eth'
+        ]
 
     last_line = ''
     import subprocess
