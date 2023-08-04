@@ -1,4 +1,4 @@
-This directory contains the test suite for the ESP32PublishSubscribe library.
+This directory contains the test suite for the ESP32 [Publish/Subscribe Component](..) library.
 
 ## Test Preparation
 

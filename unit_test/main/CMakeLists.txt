@@ -2,7 +2,7 @@
 #list(APPEND EXTRA_COMPONENT_DIRS ../..)
 
 idf_build_get_property(target IDF_TARGET)
-set(priv_requires EmbeddedPublishSubscribe unity)
+set(priv_requires esp32-component-pubsub unity)
 
 idf_component_register(
     SRC_DIRS "."
